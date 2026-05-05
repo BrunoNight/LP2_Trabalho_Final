@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+//sujeito a alterações devido ao cardapio
 public class Gerente
 {
     private String nome, cpf, email,senha;
