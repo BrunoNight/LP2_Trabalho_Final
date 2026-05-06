@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Gerente
 {
     private String nome, cpf, email,senha;
-    private ArrayList<itemCardapio> cardapio = new Arraylist<itemCardapio>();
+    private Cardapio cardapio;
     
     public Gerente(String nome, String cpf, String email, String senha)
     {
@@ -13,9 +13,13 @@ public class Gerente
         this.senha = senha;
     }
 
-    public void cadastrarCardápio(itemCardapio item)
+    public void cadastrarCardapio(itemComida item)
     {
-        cardapio.add(item);
+        cardapio.getListaComida().add(item);
+    }
+    public void cadastrarCardapio(itemBebida item)
+    {
+        cardapio.getlistaBebida().add(item);
     }
     
     public ArrayList<itemCardapio> getCardapio(){
