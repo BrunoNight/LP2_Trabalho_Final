@@ -1,58 +1,49 @@
-import java.util.ArrayList;
+package modelo;
 
-public class Mesa
-{
+public class Mesa {
     private int id;
     private boolean ocupado;
     private Cliente clienteMesa;
-    private ArrayList<PedidoCliente> pedidosMesa = new ArrayList<PedidoCliente>();
 
-    public Mesa(int id, Cliente clienteMesa)
-    {
-        this.id = id;
+    public Mesa() {
         this.ocupado = false;
-        this.clienteMesa = clienteMesa;
+        this.clienteMesa = null;
     }
 
-    public void addPedidoMesa(PedidoCliente pedido)
-    {
-        pedidosMesa.add(pedido);
+    // Métodos de negócio mapeados no UML
+    public void ocuparMesa() {
+        this.ocupado = true;
     }
-    public void ocuparMesa(){
-        ocupado = true;
+
+    public void liberarMesa() {
+        this.ocupado = false;
+        this.clienteMesa = null; 
     }
-    public void liberarMesa(){
-        ocupado = false;
+
+    public void acessarCardapio() {
+        System.out.println("Acessando o cardápio da mesa: " + this.id);
     }
-    
-    public void acessarCardapio(){
-        //
-    }
-    
+
     public int getId() {
         return id;
     }
-    
-    public boolean isOcupado() {
-        return ocupado;
-    }
-    
-    public Cliente getClienteMesa() {
-        return clienteMesa;
-    }
-    
-    public ArrayList<PedidoCliente> getPedidosMesa() {
-        return pedidosMesa;
-    }
-    
+
     public void setId(int id) {
         this.id = id;
     }
-    
+
+    public boolean isOcupado() {
+        return ocupado;
+    }
+
     public void setOcupado(boolean ocupado) {
         this.ocupado = ocupado;
     }
-    
+
+    public Cliente getClienteMesa() {
+        return clienteMesa;
+    }
+
     public void setClienteMesa(Cliente clienteMesa) {
         this.clienteMesa = clienteMesa;
     }
