@@ -1,17 +1,22 @@
 public class ItemBebida extends ItemCardapio {
-	private String fornecedorBebida;
+	private String fornecedor;
 
-	public ItemBebida(String nomeItem, float precoItem, String tipoItem, String fornecedorBebida) {
-		super(nomeItem, precoItem, tipoItem);
+	public ItemBebida(String nome, float preco, String fornecedor) {
+		super(nome, preco);
 
-		this.fornecedorBebida = fornecedorBebida;
+		this.fornecedor = fornecedor;
 	}
 
-	public String getFornecedorBebida() {
-		return this.fornecedorBebida;
+	@Override
+	public String exibirDetalhes() {
+		return "Nome: "+this.nome+"\nPreco: "+this.preco+"\nFornecedor: "+this.fornecedor;
 	}
 
-	public void setFornecedorBebida(String fornecedorBebida) {
-		this.fornecedorBebida = fornecedorBebida;
+	public String getFornecedor() {
+		return this.fornecedor;
+	}
+
+	public void setFornecedor(String fornecedor) {
+		this.fornecedor = fornecedor;
 	}
 }

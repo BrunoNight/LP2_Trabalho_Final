@@ -1,26 +1,32 @@
 public class ItemComida extends ItemCardapio {
-	private String descricaoComida;
-	private String ingredientesComida;
+	private String descricao;
+	private String ingredientes;
 
-	public ItemComida(String nomeItem, float precoItem, String tipoItem, String descricaoComida, String ingredientesComida) {
-		super(nomeItem, precoItem, tipoItem);
+	public ItemComida(String nome, float preco, String tipo, String descricao, String ingredientes) {
+		super(nome, preco);
 
-		this.ingredientesComida = ingredientesComida;
+		this.descricao = descricao;
+		this.ingredientes = ingredientes;
 	}
 
-	public String getDescricaoComida() {
-		return this.descricaoComida;
+	@Override
+	public String exibirDetalhes() {
+		return "Nome: "+this.nome+"\nPreco: "+this.preco+"\nDescricao: "+this.descricao+"\nIngrediente: "+this.ingredientes;
 	}
 
-	public void setDescricaoComida(String descricaoComida) {
-		this.descricaoComida = descricaoComida;
+	public String getDescricao() {
+		return this.descricao;
 	}
 
-	public String getIngredientesComida() {
-		return this.ingredientesComida;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public void setIngredientesComida(String ingredientesComida) {
-		this.ingredientesComida = ingredientesComida;
+	public String getIngredientes() {
+		return this.ingredientes;
+	}
+
+	public void setIngredientes(String ingredientes) {
+		this.ingredientes = ingredientes;
 	}	
 }

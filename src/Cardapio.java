@@ -5,8 +5,8 @@ public class Cardapio {
     private ArrayList<ItemBebida> listaBebidas;
 
     public Cardapio() {
-        this.listaComidas = new ArrayList<ItemComida> listaComidas;
-        this.listaBebidas = new ArrayList<ItemBebidas> listaBebidas;
+        this.listaComidas = new ArrayList<ItemComida>();
+        this.listaBebidas = new ArrayList<ItemBebidas>();
     }
 
     public ArrayList<ItemComida> getComidas() {

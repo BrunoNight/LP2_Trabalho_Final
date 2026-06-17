@@ -1,39 +1,31 @@
-public class ItemCardapio {
-	private String nomeItem;
-	private float precoItem;
-	private String tipoItem;
+public abstract class ItemCardapio {
+	protected String nome;
+	protected float preco;
 
-	public ItemCardapio(String nomeItem, float precoItem, String tipoItem) {
-		this.nomeItem = nomeItem;
-		this.precoItem = precoItem;
-		this.tipoItem = tipoItem;
+	public ItemCardapio(String nome, float preco) {
+		this.nome = nome;
+		this.preco = preco;
 	}
 
-	public void atualizarPrecoItem(float novoPreco) {
+	public abstract String exibirDetalhes();
+
+	public void atualizarPreco(float novoPreco) {
 		if(novoPreco <= 0) {
 			return;
 		}
 		
-		this.precoItem = novoPreco;
+		this.preco = novoPreco;
 	}
 
-	public String nomeItem() {
-		return this.nomeItem;
+	public String getNome() {
+		return this.nome;
 	}
 
-	public float precoItem() {
-		return this.precoItem;
+	public float getPreco() {
+		return this.preco;
 	}
 
-	public String tipoItem() {
-		return this.tipoItem;
-	}
-
-	public void nomeItem(String nomeItem) {
-		this.nomeItem = nomeItem;
-	}
-
-	public void tipoItem(String tipoItem) {
-		this.tipoItem = tipoItem;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 }
