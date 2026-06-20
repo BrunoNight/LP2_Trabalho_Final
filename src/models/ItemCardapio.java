@@ -7,8 +7,6 @@ public abstract class ItemCardapio {
 		this.preco = preco;
 	}
 
-	public abstract String exibirDetalhes();
-
 	public void atualizarPreco(float novoPreco) {
 		if(novoPreco <= 0) {
 			return;

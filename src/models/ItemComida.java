@@ -9,16 +9,11 @@ public class ItemComida extends ItemCardapio {
 		this.ingredientes = ingredientes;
 	}
 
-	@Override
-	public String exibirDetalhes() {
-		return "Nome: "+this.nome+"\nPreco: "+this.preco+"\nDescricao: "+this.descricao+"\nIngrediente: "+this.ingredientes;
-	}
-
 	public String getDescricao() {
 		return this.descricao;
 	}
 
-	public void setDescricao(String descricao) {
+	public void atualizarDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
@@ -26,7 +21,7 @@ public class ItemComida extends ItemCardapio {
 		return this.ingredientes;
 	}
 
-	public void setIngredientes(String ingredientes) {
+	public void atualizarIngredientes(String ingredientes) {
 		this.ingredientes = ingredientes;
 	}	
 }

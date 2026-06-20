@@ -7,16 +7,11 @@ public class ItemBebida extends ItemCardapio {
 		this.fornecedor = fornecedor;
 	}
 
-	@Override
-	public String exibirDetalhes() {
-		return "Nome: "+this.nome+"\nPreco: "+this.preco+"\nFornecedor: "+this.fornecedor;
-	}
-
 	public String getFornecedor() {
 		return this.fornecedor;
 	}
 
-	public void setFornecedor(String fornecedor) {
+	public void atualizarFornecedor(String fornecedor) {
 		this.fornecedor = fornecedor;
 	}
 }
